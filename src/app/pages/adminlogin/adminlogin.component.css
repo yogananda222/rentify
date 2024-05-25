@@ -1,0 +1,68 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Style for body */
+  body {
+    font-family: Arial, sans-serif;
+    /* background-color: #f0f0f0; */
+  }
+  
+  /* Style for admin login section */
+  .adminlogin {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .amdinlogin h2{
+    margin-top: 30px;
+  }
+
+  .image {
+    max-width: 70%;
+    height: auto;
+    margin-bottom: 20px;
+    margin-left: 40px;
+  }
+  /* Style for admin login form */
+  .adminlogin form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Style for admin login form labels */
+  .adminlogin label {
+    margin-bottom: 5px;
+  }
+  
+  /* Style for admin login form inputs */
+  .adminlogin input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Style for admin login form button */
+  .adminlogin button {
+    padding: 10px 20px;
+    background-color: #353635;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Style for admin login form button on hover */
+  .adminlogin button:hover {
+    background-color: #45a049;
+  }
+  

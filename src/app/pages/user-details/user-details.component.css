@@ -1,0 +1,51 @@
+/* Container for user details */
+.user-details-container {
+    margin-bottom: 30px;
+  }
+  
+  /* Header for user details */
+  .user-details-container h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* User details */
+  .user-details-container p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+  }
+  /* Table styling */
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  /* Table header */
+  .order-table th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  /* Table data */
+  .order-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Alternate row background color */
+  .order-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Hover effect */
+  .order-table tbody tr:hover {
+    background-color: #f2f2f2;
+  }

@@ -1,0 +1,19 @@
+<div class="finalimage">
+  <img src="/assets/Images/signupimage.png">
+</div>
+
+<form (ngSubmit)="registerUser(user)" #userForm="ngForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" [(ngModel)]="user.username" required>
+  
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" [(ngModel)]="user.userEmail" required>
+
+    <label for="text">Phone Number:</label>
+    <input type="text" id="text" name="text" [(ngModel)]="user.userContact" required>
+  
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" [(ngModel)]="user.userPassword" required>
+  
+    <button type="submit" [disabled]="!userForm.valid">Register</button>
+  </form>

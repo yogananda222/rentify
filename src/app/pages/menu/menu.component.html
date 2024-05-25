@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arial">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>NANDAS CAFE</title>
+</head>
+<body>
+  <section class="header">
+    <div class="container">
+        <header>
+          <div class="logo">
+            <img src="/assets/Images/logo.png" alt="Cafe Management Logo">
+          </div>
+          <div class="search-bar">
+            <div class="search-container">
+              <input type="text" placeholder="Looking for something specific..?" class="search-input">
+              <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+            </div>
+            <button class="help" (click)="navigateToHelp()"><i class="fas fa-headset"></i> Help</button>
+            <button class="Book" (click)="navigateToBookaTable()"><i class="fas fa-chair" ></i> Book a Table</button>
+            <button class="cart-icon"  (click)="navigateToCart()"><i class="fas fa-cart-plus"></i>Cart</button>
+          </div>
+          <div class="profile-dropdown">
+            <button class="profile-button">
+              <i class="fas fa-user-circle"></i>
+              {{ user ? user.username : 'Sign In' }}
+            </button>
+            <div class="dropdown-content">
+              <p (click)="navigateToUserDetails()"><i class="fa fa-user"></i> User Details</p>
+              <button (click)="logout()"><i class="fa fa-sign-out"></i> LOGOUT</button>
+            </div>
+          </div>
+        </header>
+      </div>
+  </section>
+  <section class="body">
+    <div class="food-list-container">
+      <div *ngFor="let food of foods" class="food-item">
+        <img [src]="food.foodImage" alt="{{ food.foodName }}">
+        <div class="food-details">
+          <div class="food-title">{{ food.foodName }}</div>
+          <div class="food-description">{{ food.foodDescription }}</div>
+          <div class="food-price">Price: {{ food.foodPrice }}</div>
+          <button class="add-to-cart-btn" (click)="addToCart(food)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+      
+        
