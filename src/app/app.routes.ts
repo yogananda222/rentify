@@ -6,7 +6,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ListyourpropertyComponent } from './pages/listyourproperty/listyourproperty.component';
 import { ReviewsComponent } from './pages/support/support.component';
 import { OwnerDashboardComponent } from './pages/owner-dashboard/owner-dashboard.component';
-import { OwnerRightsComponent } from './pages/owner-rights/owner-rights.component';
+
 
 
 
@@ -21,7 +21,7 @@ export const routes: Routes = [
     {path:"listyourproperty", component:ListyourpropertyComponent},
     {path:"support", component: ReviewsComponent},
     {path:"OwnerDashboard", component:OwnerDashboardComponent},
-    {path:"ownerights", component:OwnerRightsComponent}
+
 
 
     
