@@ -5,7 +5,6 @@ import { RegisterComponent } from './pages/register/register.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ListyourpropertyComponent } from './pages/listyourproperty/listyourproperty.component';
 import { ReviewsComponent } from './pages/support/support.component';
-import { CrudOperationComponent } from './pages/crud-operation/crud-operation.component';
 import { UserDetailsComponent } from './pages/user-details/user-details.component';
 
 
@@ -20,7 +19,6 @@ export const routes: Routes = [
     {path:"Tenantdashboard", component:DashboardComponent},
     {path:"listyourproperty", component:ListyourpropertyComponent},
     {path:"support", component: ReviewsComponent},
-    {path:"SellerDashboard" , component:CrudOperationComponent},
     {path:"userdetails", component:UserDetailsComponent}
 
     
