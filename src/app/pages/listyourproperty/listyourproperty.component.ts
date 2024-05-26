@@ -4,6 +4,7 @@ import { ProductService } from '../../core/services/product.service';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { User } from '../../core/model/user';
 
 @Component({
   selector: 'app-listyourproperty',
@@ -14,6 +15,8 @@ import { FormsModule } from '@angular/forms';
 })
 export class ListyourpropertyComponent implements OnInit {
 
+
+
   property: Property = {
     Id:0,
     HouseImage: "",
@@ -22,6 +25,17 @@ export class ListyourpropertyComponent implements OnInit {
     numberOfBedrooms:"",
     numberOfBathrooms:"",
     landmarks:"",
+  }
+
+  user: User ={
+    Id: 0,
+    firstName: "",
+    lastName:"",
+    email:"",
+    phoneNumber:"",
+    password:"",
+    role:""
+    
   }
 
 
@@ -45,6 +59,9 @@ export class ListyourpropertyComponent implements OnInit {
     );
   }
 
+  register(){
+    this.router.navigate(['/register'])
+  }
 
 
 }

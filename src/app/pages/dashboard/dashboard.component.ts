@@ -49,22 +49,6 @@ export class DashboardComponent implements OnInit{
     }
    }
 
-   navigateToUserDetails()
-{
-  this.router.navigate(['/userdetails'])
-}  
-
-// getAllProperties(): void {
-//   this.productService.getAllProperties().subscribe(
-//     (properties: Property[]) => {
-//       this.properties = properties;
-//     },
-//     (error) => {
-//       console.error('Error fetching properties:', error);
-//     }
-//   );
-// }
-
 getAllProperties() : void{
   this.productService.getAllProperties().subscribe(properties => {
     this.properties = properties;

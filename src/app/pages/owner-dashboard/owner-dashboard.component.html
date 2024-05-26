@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NANDAS CAFE</title>
+</head>
+<body>
+    <div class="login-box">
+      <h2>Owner Login</h2>
+      <form #spForm="ngForm" (ngSubmit)="loginuser()">
+        <div class="user-box">
+          <input type="email" id="email" name="email" placeholder=" " [(ngModel)]="user.email" required>
+          <label>Email</label>
+        </div>
+        <div class="user-box">
+          <input type="password" id="userPassword" name="userPassword" placeholder="" [(ngModel)]="user.password" required>
+          <label>Password</label>
+        </div>
+        <div class="user-box">
+          <button type="submit" (click)="loginuser()"><b>Submit</b></button>
+        </div>
+      </form>
+      </div>
+</body>
+</html>

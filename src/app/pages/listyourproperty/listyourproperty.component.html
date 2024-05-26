@@ -10,6 +10,10 @@
         <h2>List Your Property</h2>
         <form #spForm="ngForm" (ngSubmit)="addProperty(property)">
           <div class="user-box">
+            <input type="firstName" id="firstName" name="firstName" placeholder=" " [(ngModel)]="user.firstName" required>
+            <label>username</label>
+          </div>
+          <div class="user-box">
             <input type="email" id="email" name="email" placeholder=" " [(ngModel)]="property.HouseImage" required>
             <label>House Image Url</label>
           </div>
@@ -33,6 +37,8 @@
             <input type="email" id="email" name="email" placeholder=" " [(ngModel)]="property.landmarks" required>
             <label>Landmark</label>
             <button type="submit" (click)="addProperty(property)"><b>Submit</b></button>
+            <p>Not a registed Owner..?</p>
+            <p (click)="register()">Register here...</p>
           </div>
         </form>
       </div>

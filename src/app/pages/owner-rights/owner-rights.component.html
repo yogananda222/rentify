@@ -1,0 +1,39 @@
+<!-- Display user properties -->
+<div *ngIf="userProperties">
+    <h2>User Properties</h2>
+    <table>
+      <tr>
+        <th>Id</th>
+        <th>City</th>
+        <th>Area</th>
+        <th>Bedrooms</th>
+        <th>Bathrooms</th>
+        <th>Landmarks</th>
+        <th>Actions</th>
+      </tr>
+      <tr *ngFor="let property of userProperties">
+        <td>{{ property.Id }}</td>
+        <td>{{ property.city }}</td>
+        <td>{{ property.area }}</td>
+        <td>{{ property.numberOfBedrooms }}</td>
+        <td>{{ property.numberOfBathrooms }}</td>
+        <td>{{ property.landmarks }}</td>
+        <td>
+          <button (click)="editProperty(property)">Edit</button>
+          <button (click)="deleteProperty(property.Id)">Delete</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+  
+  <!-- Add/Edit Property Form -->
+  <div *ngIf="showForm">
+    <h2>{{ isEdit ? 'Edit Property' : 'Add Property' }}</h2>
+    <form (ngSubmit)="submitForm()">
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city" [(ngModel)]="property.city" required><br>
+      <!-- Add other property fields here -->
+      <button type="submit">{{ isEdit ? 'Save' : 'Add' }}</button>
+    </form>
+  </div>
+  

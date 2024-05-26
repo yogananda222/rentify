@@ -32,7 +32,7 @@ export class ProductListComponent  {
     this.router.navigate(['/support'])
   }
 
-  navigateToUpdateProperty(){
-    this.router.navigate(['/SellerDashboard'])
+  navigateToOnwerDashboard(){
+    this.router.navigate(['/OwnerDashboard'])
   }
 }
