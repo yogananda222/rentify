@@ -8,6 +8,7 @@ import { ProductService } from '../../core/services/product.service';
   styleUrls: ['./homepage.component.css']
 })
 export class ProductListComponent  {
+  isDropdownOpen: boolean = false;
 
   constructor(private router: Router, private productService: ProductService){}
 
@@ -17,5 +18,21 @@ export class ProductListComponent  {
 
   navigateToLogin(){
     this.router.navigate(['/login'])
+  }
+
+  navigateToListingProperty(){
+    this.router.navigate(['/listyourproperty'])
+  }
+
+  navigateToDashboard(){
+    this.router.navigate(['/dashboard'])
+  }
+
+  navigateToSupport(){
+    this.router.navigate(['/support'])
+  }
+
+  navigateToReviwes(){
+    this.router.navigate(['/reviews'])
   }
 }

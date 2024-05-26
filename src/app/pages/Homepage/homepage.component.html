@@ -23,9 +23,21 @@
           <input type="text" placeholder="Enter City..." class="search-input">
           <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
         </div>
-        <button class="for-tenants" ><b>For Tenants</b></button>
-        <button class="for-owners" ><b>For Owners</b></button>
-        <button class="support"><b>Support</b></button>
+        <div class="profile-dropdown">
+          <button class="profile-button for-tenants"><b>For Tenants</b>   <i class="fa fa-angle-down"></i></button>
+          <div class="dropdown-content tenants-dropdown">
+              <p (click)="navigateToDashboard()">Flats</p>
+              <p (click)="navigateToDashboard()">Independent House</p>
+          </div>
+      </div>
+      <div class="profile-dropdown">
+          <button class="profile-button for-owners"><b>For Owners</b>   <i class="fa fa-angle-down"></i></button>
+          <div class="dropdown-content owners-dropdown">
+              <p (click)="navigateToListingProperty()">List Properties for free</p>
+              <p (click)="navigateToReviwes()">Reviews</p>
+          </div>
+      </div>
+        <button class="support" (click)="navigateToSupport()"><b>Support</b></button>
         <button class="login-button" (click)="navigateToLogin()"><i class="fa fa-user-circle-o"></i><b>Login</b></button>
         <button class="register-button" (click)="navigateToRegister()"><i class="fa fa-user-circle-o"></i><b>Register</b></button>
       </div>
@@ -168,7 +180,7 @@
             <h3>Own a home?<br> Let us help you manage it</h3>
             <p>List your property in a few easy steps and enjoy hassle-free management services, including on-time rent and proactive maintenance.</p>
             <button class="cssbuttons-io-button">
-                    <span>List your property</span>
+                    <span (click)="navigateToListingProperty()">List your property</span>
               </button>
         </div>
 </section>

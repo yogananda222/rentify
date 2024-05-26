@@ -96,22 +96,28 @@ body {
   border-bottom: 1px solid #fff;
   outline: none;
   background: transparent;
-  appearance: none; /* This hides the default arrow in some browsers */
-  -webkit-appearance: none; /* For WebKit browsers */
-  -moz-appearance: none; /* For Firefox */
+  appearance: none; 
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
 }
 
-/* Style the arrow icon */
 .login-box .user-box select::after {
-  content: "\25BC"; /* Unicode character for down arrow */
+  content: "\25BC"; 
   position: absolute;
-  top: calc(50% - 0.5em); /* Vertically center the arrow */
+  top: calc(50% - 0.5em); 
   right: 10px;
   color: #fff;
   pointer-events: none;
 }
 
-/* Style the selected option */
+
 .login-box .user-box select option {
-  background-color: rgba(0, 0, 0, 0.5); /* Background color for options */
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.login-box .user-box input:not(:placeholder-shown) ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
 }

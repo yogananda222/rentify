@@ -41,7 +41,7 @@ header {
   padding: 8px 8px 8px 8px;
   border: 1px solid #ccc;
   border-radius: 20px;
-  width: 250px; 
+  width: 230px; 
 }
 
 .search-bar .search-button {
@@ -429,4 +429,25 @@ footer {
 }
 footer p {
   margin: 0; 
+}
+
+.dropdown-content {
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+  display: none;
+}
+
+.dropdown-content p,
+.dropdown-content button {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  color: #333;
+  margin-left: 40px;
+  cursor: pointer;
+}
+
+.profile-dropdown:hover .dropdown-content {
+  display: block;
 }

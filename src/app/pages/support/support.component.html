@@ -1,0 +1,12 @@
+<section class="container">
+    <h2><b>Help & Support </b></h2>
+    <div *ngFor="let item of faq; let i = index" class="faq-item">
+      <div class="question" (click)="toggleAnswer(i)">
+        <span>{{ item.question }}</span>
+        <i class="fa" [ngClass]="{'fa-chevron-down': item.showAnswer, 'fa-chevron-right': !item.showAnswer}"></i>
+      </div>
+      <div class="answer" *ngIf="item.showAnswer">
+        <p>{{ item.answer }}</p>
+      </div>
+    </div>
+</section>

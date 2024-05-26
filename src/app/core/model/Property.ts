@@ -6,5 +6,5 @@ export interface Property {
     area: string;
     numberOfBedrooms: string;
     numberOfBathrooms: string; 
-    landmarks: string; 
+    landmarks: string;      
 }
