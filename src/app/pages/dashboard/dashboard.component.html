@@ -32,17 +32,22 @@
       <ul>
         <li *ngFor="let property of properties">
           <img [src]="property.HouseImage" alt="{{ property.HouseImage }}">
-          <p>{{ property.city }}</p>
-          <p>{{property.area}}</p>
-          <p>{{property.numberOfBedrooms}}</p>
-          <p>{{property.numberOfBathrooms}}</p>
-          <p>{{property.landmarks}}</p>
+          <p> City: {{ property.city }}</p>
+          <p>Area: {{property.area}}</p>
+          <p>Bedrooms: {{property.numberOfBedrooms}}</p>
+          <p>Bathrooms: {{property.numberOfBathrooms}}</p>
+          <p>NearBy: {{property.landmarks}}</p>
         </li>
       </ul>
     </div>
     <div *ngIf="!properties || properties.length === 0">
       <p>No properties available.</p>
-    </div>
-    
+    </div> 
   </div>
+  <footer>
+    <p>&copy; 2024 Rentify. All rights reserved.</p>
+</footer>
+</body>
+</html>
+
 

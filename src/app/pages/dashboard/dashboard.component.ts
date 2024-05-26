@@ -51,7 +51,7 @@ export class DashboardComponent implements OnInit{
 
    navigateToUserDetails()
 {
-  this.router.navigate(['/user-details'])
+  this.router.navigate(['/userdetails'])
 }  
 
 // getAllProperties(): void {

@@ -21,7 +21,7 @@ export class ProductService {
 
   updatePropertyById = "http://localhost:8080/api/properties/update/"
 
-  getPropertyById = "http://localhost:8080/api/properties/"
+ getPropertyByfirstName = "http://localhost:8080/api/properties/user/"
 
   deletePropertyById = "http://localhost:8080/api/properties/delete/"
 
@@ -85,5 +85,11 @@ export class ProductService {
     };
     return  this.http.delete<Property>(this.deletePropertyById+`/${id}`,httpOptions);
   }
+
+  getPropertyByFirstName(firstName: string): Observable<Property[]> {
+    return this.http.get<Property[]>(this.getPropertyByFirstName + firstName);
+  }
+  
+
 
 }

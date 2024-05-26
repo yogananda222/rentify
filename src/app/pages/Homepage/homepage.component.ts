@@ -25,14 +25,14 @@ export class ProductListComponent  {
   }
 
   navigateToDashboard(){
-    this.router.navigate(['/dashboard'])
+    this.router.navigate(['/Tenantdashboard'])
   }
 
   navigateToSupport(){
     this.router.navigate(['/support'])
   }
 
-  navigateToReviwes(){
-    this.router.navigate(['/reviews'])
+  navigateToUpdateProperty(){
+    this.router.navigate(['/SellerDashboard'])
   }
 }

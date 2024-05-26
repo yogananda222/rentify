@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
         alert('Nice to see you again!');
         console.log('login response' + data);
         sessionStorage.setItem("user", JSON.stringify(data));
-        this.router.navigateByUrl("/dashboard");
+        this.router.navigateByUrl("/Tenantdashboard");
       },
       error => alert('Invalid Username or Password')
     );

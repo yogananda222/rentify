@@ -149,3 +149,61 @@
   .profile-dropdown:hover .dropdown-content {
     display: block;
   }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  li {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  li:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  li img {
+    width: 100%;
+    height: auto;
+  }
+  
+  li p {
+    margin: 10px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .no-properties {
+    font-size: 18px;
+    color: #888;
+  }
+  
+  footer {
+    background-color: #08104f; 
+    color: #fff; 
+    padding: 20px; 
+    text-align: center; 
+    position: relative;
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 999; 
+  }
+  footer p {
+    margin: 0; 
+  }
