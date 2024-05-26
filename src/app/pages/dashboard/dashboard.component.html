@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div class="containermain">
+    <header>
+      <div class="logo">
+        <img src="https://iili.io/JLJPSfV.png" alt="JLJPSfV.png">
+      </div>
+      <div class="search-bar">
+        <div class="search-container">
+          <input type="text" placeholder="Enter City..." class="search-input">
+          <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+        </div>
+        <div class="profile-dropdown">
+            <button class="profile-button">
+              <i class="fas fa-user-circle"></i>
+              {{ user ? user.firstName : 'Sign In' }}
+            </button>
+            <div class="dropdown-content">
+              <p (click)="navigateToUserDetails()"><i class="fa fa-user"></i> User Details</p>
+              <button (click)="logout()"><i class="fa fa-sign-out"></i> LOGOUT</button>
+            </div>
+          </div>
+      </div>
+    </header>
+    <div *ngIf="properties && properties.length >0">
+      <h2>All Properties</h2>
+      <ul>
+        <li *ngFor="let property of properties">
+          <img [src]="property.HouseImage" alt="{{ property.HouseImage }}">
+          <p>{{ property.city }}</p>
+          <p>{{property.area}}</p>
+          <p>{{property.numberOfBedrooms}}</p>
+          <p>{{property.numberOfBathrooms}}</p>
+          <p>{{property.landmarks}}</p>
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="!properties || properties.length === 0">
+      <p>No properties available.</p>
+    </div>
+    
+  </div>
+

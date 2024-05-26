@@ -15,12 +15,14 @@ import { FormsModule } from '@angular/forms';
 export class LoginComponent implements OnInit {
 
   user: User = {
-    userId: 0,
-    username: '',
-    userPassword: '',
-    userEmail: '',
-    userContact: 0
-  };
+    Id:0,
+    firstName: "",
+    lastName :"",
+    password: "",
+    email:"",
+    role:"",
+    phoneNumber:"",
+  }
 
 
 
@@ -36,59 +38,15 @@ export class LoginComponent implements OnInit {
         alert('Nice to see you again!');
         console.log('login response' + data);
         sessionStorage.setItem("user", JSON.stringify(data));
-        this.router.navigateByUrl("/userdashboard");
+        this.router.navigateByUrl("/dashboard");
       },
       error => alert('Invalid Username or Password')
     );
   
 }
-
-
-
-navigateToHelp(){
-  this.router.navigate(['/help'])
-}
-
-navigateToCart(){
-  this.router.navigate(['/cart'])
-}
-
-navigateToLogin(){
-  this.router.navigate(['/login'])
-}
-
-navigateToBookaTable(){
-  this.router.navigate(['/Book-a-Table'])
-}
-
-navigateToFranchise() {
-  this.router.navigateByUrl('/franchise');
-}
-
-navigateToHome() {
-  this.router.navigate(['/home'])
-}
-
-navigateToTerms() {
-  this.router.navigate(['/terms&conditions'])
-}
-
-navigateToAbout(){
-  this.router.navigate(['/about'])
-}
-
-navigateToItemsPage(){
-  this.router.navigate(['/'])
-}
-  
-
   navigateToRegister() : void{
     this.router.navigate(['/register']); 
     
-  }
-
-  navigateToAdmin(): void{
-    this.router.navigate(['/admin'])
   }
 
 }

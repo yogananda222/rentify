@@ -13,33 +13,38 @@ import { User } from '../../core/model/user';
 })
 export class RegisterComponent implements OnInit{
 
-  user: User = {userId:0,username:'',userPassword:'',userEmail:'',userContact:0}
+  user: User = {
+    Id:0,
+    firstName: "",
+    lastName :"",
+    password: "",
+    email:"",
+    role:"",
+    phoneNumber:"",
+  }
 
-  userId: number =0
-  username : string =''
-  userPassword: string =''
-  userEmail: string =""
-  userContact:number=0
-  isEditable: any;
   
 
-  constructor(public productService: ProductService, public router: Router, private activatedRoute: ActivatedRoute) { }
+  constructor(private router: Router, private productService: ProductService) {}
 
   ngOnInit(): void {
       
   }
 
   registerUser(user: User): void {
-    this.productService.registerUser(this.user).subscribe(
+    this.productService.reigsteruser(this.user).subscribe(
       (data) => {
-        console.log('Registration successful', data); // Log success response
+        console.log('Registration successful', data); 
         alert('User registered successfully');
         this.router.navigate(['/login']);
       },
       (error) => {
-        console.error('Failed to register user', error); // Log error
-        // Handle error here, you might want to display an error message to the user
+        console.error('Failed to register user', error); 
       }
     );
+  }
+
+  navigateToLogin(){
+    this.router.navigate(['/login'])
   }
 }

@@ -1,55 +1,117 @@
+html,
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  height: 100%;
+}
+
+.login-box {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.login-box h2 {
   margin: 0;
-}
-
-.finalimage img {
-  position: relative;
-  margin-left: 70px;
-  height: 500px;
-  /* margin-top: 150px; */
-  
-
-}
-
-
-
-form {
-  width: 400px; /* Adjust the width as needed */
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 15px;
-  margin-left: 550px;
-  margin-top: -400px;
-}
-
-form label {
-  display: block;
-  margin-bottom: 10px;
-}
-
-form input {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 15px;
-  border-radius: 3px;
-  border: 1px solid #ccc;
-}
-
-form button {
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
+  padding: 0;
   color: #fff;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
+  text-align: center;
 }
 
-form button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.login-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 10px;
+  font-size: 16px;
+  background-color: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+
+.login-box form a {
+  display: block;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 20px;
+}
+.login-box .user-box p {
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 20px;
+}
+.login-box .user-box select {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+  appearance: none; /* This hides the default arrow in some browsers */
+  -webkit-appearance: none; /* For WebKit browsers */
+  -moz-appearance: none; /* For Firefox */
+}
+
+/* Style the arrow icon */
+.login-box .user-box select::after {
+  content: "\25BC"; /* Unicode character for down arrow */
+  position: absolute;
+  top: calc(50% - 0.5em); /* Vertically center the arrow */
+  right: 10px;
+  color: #fff;
+  pointer-events: none;
+}
+
+/* Style the selected option */
+.login-box .user-box select option {
+  background-color: rgba(0, 0, 0, 0.5); /* Background color for options */
 }
